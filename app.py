@@ -9,8 +9,12 @@ app= Flask(__name__)
 
 @app.route('/')
 @app.route('/home')
-def home():
-    return render_template('home.html')
+def home_page():
+    return render_template('form.html')
+
+@app.route('/form')
+def form_page():
+    return render_template('form.html')
 
 @app.route('/validation', methods=['GET'])
 def login():
